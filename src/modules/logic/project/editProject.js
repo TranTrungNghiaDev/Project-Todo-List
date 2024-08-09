@@ -8,3 +8,5 @@ function editProject(projectList, projectId, dueDate) {
         alert("Change complete");
     }
 }
+
+export {editProject}

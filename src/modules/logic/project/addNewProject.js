@@ -1,9 +1,11 @@
-function addNewProject(projectList, id, dueDate) {
+function addNewProject(projectList, dueDate) {
     const project = {
-        id,
+        id : "",
         dueDate,
         todoList: []
     }
-    
     projectList.push(project);
+    project.id = projectList.length - 1;
 }
+
+export {addNewProject}
