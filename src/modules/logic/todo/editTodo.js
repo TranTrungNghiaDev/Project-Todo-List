@@ -3,8 +3,9 @@ function editTodo(projectList, projectId, todoId ,title, description, dueDate, p
     const project = projectList[projectPosition];
 
     const todoPosition = project.todoList.findIndex(todo => todo.id === todoId);
-    const todo = project.todoList[todoPosition];
     
+    const todo = project.todoList[todoPosition];
+
     todo.title = title;
     todo.description = description;
     todo.dueDate = dueDate;

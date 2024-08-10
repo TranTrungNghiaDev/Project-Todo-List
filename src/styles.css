@@ -1,0 +1,11 @@
+:root {
+    font-size: 1rem;
+}
+
+input, select {
+    display: block;
+}
+
+input[type = "radio"] {
+    display: inline-block;
+}
