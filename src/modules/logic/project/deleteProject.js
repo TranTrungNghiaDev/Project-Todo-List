@@ -8,7 +8,6 @@ function deleteProject(projectList, projectId) {
     else {
         projectList.splice(projectIndex, 1);
         changeIdDependIndex(projectList);
-        alert("Delete complete");
     }
 }
 

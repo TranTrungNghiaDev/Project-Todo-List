@@ -58,6 +58,7 @@ function createEditTodoBtn(parentElement, projectId, todoData) {
         refreshContentDiv();
         console.log(projectList);
         dialog.close();
+        alert("Change complete");
     })
 
     form.appendChild(submitBtn);

@@ -1,5 +1,16 @@
+@font-face {
+    font-family: "hand-write";
+    src: url("./modules/DOM/fonts/scripto-font/Scripto-2OR2v.ttf");
+}
+
 :root {
-    font-size: 1rem;
+    font-size: 1;
+    font-family: "hand-write", Arial, Helvetica, sans-serif;
+}
+
+body {
+    background-image: url("./modules/DOM/imgs/wallpaper.jpg");
+    background-size: cover;
 }
 
 input, select {
@@ -9,3 +20,71 @@ input, select {
 input[type = "radio"] {
     display: inline-block;
 }
+
+h1 {
+    text-align: center;
+    font-size: 2rem;
+}
+
+h2 {
+    margin: 10px;
+    font-size: 1.5rem;
+}
+
+ul {
+    list-style-type: none;
+}
+
+.project-title-section {
+    display: flex;
+    justify-content: space-between;
+    border-bottom: 1px dashed black;
+    align-items: center;
+}
+
+button {
+    margin: 5px 10px 5px 0;
+    padding: 5px 20px;
+    border-radius: 20px;
+    border: 0;
+    outline: 0;
+    background-color: #55c2da;
+    font-family: inherit;
+    font-size: 1.2rem;
+}
+
+#add-project-btn, .todo-btn {
+    display: block;
+    margin: 20px auto;
+    padding: 10px 40px;
+}
+
+.project-section {
+    border: 1px solid black;
+    border-radius: 10px;
+    width: 60%;
+    margin: 20px auto;
+    background-color: snow;
+    font-size: 1.2rem;
+}
+
+.project-section:nth-child(odd) .project-title-section{
+    background-color: #f76c6c;
+}
+
+.project-section:nth-child(even) .project-title-section{
+    background-color: #f8e9a1;
+}
+
+.High-priority {
+    color:  red;
+}
+
+.Medium-priority {
+    color: orange;
+}
+
+.Low-priority {
+    color: green;
+}
+

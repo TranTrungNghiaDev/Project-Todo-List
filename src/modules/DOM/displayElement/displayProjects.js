@@ -10,6 +10,12 @@ function displayProjects() {
 
     projectList.forEach(project => {
         const projectSection = document.createElement("section");
+        projectSection.classList.add("project-section");
+        const titleSection = document.createElement("section");
+        titleSection.classList.add("project-title-section")
+        const buttonListSection = document.createElement("section");
+        buttonListSection.classList.add("button-list-section");
+
         projectSection.id = project.id;
         const projectDueDate = document.createElement("h2");
         projectDueDate.textContent = project.dueDate;
@@ -17,13 +23,20 @@ function displayProjects() {
         const deleteBtn = document.createElement("button");
         deleteBtn.textContent = "Delete Project";
         deleteBtn.addEventListener("click", () => {
-            deleteProject(projectList, project.id);
-            refreshContentDiv();
+            const result = confirm("Do you want to delete this project ?");
+            if(result) {
+                deleteProject(projectList, project.id);
+                refreshContentDiv();
+                alert("Delete complete");
+            }
+            
         })
 
-        projectSection.appendChild(projectDueDate);
-        createEditProjectBtn(projectSection, project.id);
-        projectSection.appendChild(deleteBtn);
+        titleSection.appendChild(projectDueDate);
+        createEditProjectBtn(buttonListSection, project.id);
+        buttonListSection.appendChild(deleteBtn);
+        titleSection.appendChild(buttonListSection);
+        projectSection.appendChild(titleSection);
         displayTodo(projectSection, project);
         createAddTodoBtn(projectSection, project.id);
         contentDiv.appendChild(projectSection);

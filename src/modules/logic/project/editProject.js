@@ -5,7 +5,6 @@ function editProject(projectList, projectId, dueDate) {
     }
     else {
         projectList[projectIndex].dueDate = dueDate;
-        alert("Change complete");
     }
 }
 

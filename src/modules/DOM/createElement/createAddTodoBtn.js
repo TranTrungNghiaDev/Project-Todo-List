@@ -9,6 +9,7 @@ function createAddTodoBtn(parentElement, projectId) {
     const showDialogBtn = document.createElement("button");
     showDialogBtn.type = "button";
     showDialogBtn.textContent = "Add Todo";
+    showDialogBtn.classList.add("todo-btn");
     showDialogBtn.addEventListener("click", () => {
         dialog.showModal();
     })
@@ -47,6 +48,7 @@ function createAddTodoBtn(parentElement, projectId) {
         addTodo(projectList, projectId, title, description, dueDate, priority)
         refreshContentDiv();
         dialog.close();
+        alert("Add complete");
     })
 
     form.appendChild(submitBtn);

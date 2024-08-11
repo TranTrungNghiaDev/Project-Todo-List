@@ -7,6 +7,7 @@ function createAddProjectBtn() {
     const bodyElement = document.querySelector("body");
 
     const addNewProjectBtn = document.createElement("button");
+    addNewProjectBtn.id = "add-project-btn";
     addNewProjectBtn.textContent = "Add New Project";
     addNewProjectBtn.addEventListener("click", () => {
         dialog.showModal();
@@ -26,6 +27,7 @@ function createAddProjectBtn() {
         addNewProject(projectList, dateInput.value.toString());
         refreshContentDiv();
         dialog.close();
+        alert("Add complete");
     })
 
     form.appendChild(formTitle);

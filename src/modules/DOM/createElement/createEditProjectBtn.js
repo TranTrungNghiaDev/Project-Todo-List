@@ -24,6 +24,7 @@ function createEditProjectBtn(projectElement, projectId) {
         e.preventDefault();
         editProject(projectList, projectId, dateInput.value.toString());
         refreshContentDiv();
+        alert("Change complete");
         dialog.close();
     })
 
