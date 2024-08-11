@@ -1,4 +1,8 @@
-function editTodo(projectList, projectId, todoId ,title, description, dueDate, priority) {
+import { getProjectList } from "../localStorage/getProjectList";
+import { setProjectList } from "../localStorage/setProjectList";
+
+function editTodo(projectId, todoId ,title, description, dueDate, priority) {
+    const projectList = getProjectList();
     const projectPosition = projectList.findIndex(project => project.id === projectId);
     const project = projectList[projectPosition];
 
@@ -10,6 +14,8 @@ function editTodo(projectList, projectId, todoId ,title, description, dueDate, p
     todo.description = description;
     todo.dueDate = dueDate;
     todo.priority = priority;
+
+    setProjectList(projectList);
 }
 
 export {editTodo}

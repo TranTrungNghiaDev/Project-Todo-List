@@ -1,5 +1,4 @@
 import { editTodo } from "../../logic/todo/editTodo";
-import { projectList } from "../../..";
 import { refreshContentDiv } from "../refreshContentDiv";
 import { createLabelElement } from "./createLabelElement";
 import { createInputElement } from "./createInputElement";
@@ -45,9 +44,7 @@ function createEditTodoBtn(parentElement, projectId, todoData) {
         const dueDate = dueDateInput.value;
         const priority = priorityInput.value;
 
-        console.log(todoData);
-
-        editTodo(projectList,
+        editTodo(
             projectId,
             id,
             title,
@@ -56,7 +53,6 @@ function createEditTodoBtn(parentElement, projectId, todoData) {
             priority);
 
         refreshContentDiv();
-        console.log(projectList);
         dialog.close();
         alert("Change complete");
     })

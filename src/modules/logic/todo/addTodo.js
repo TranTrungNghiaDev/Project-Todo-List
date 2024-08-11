@@ -1,4 +1,8 @@
-function addTodo(projectList, projectId, title, description, dueDate, priority) {
+import { getProjectList } from "../localStorage/getProjectList";
+import { setProjectList } from "../localStorage/setProjectList";
+
+function addTodo(projectId, title, description, dueDate, priority) {
+    const projectList = getProjectList();
     const todo = {
         id: "",
         title,
@@ -12,6 +16,8 @@ function addTodo(projectList, projectId, title, description, dueDate, priority) 
     
     project.todoList.push(todo);
     todo.id = project.todoList.length - 1;
+    
+    setProjectList(projectList);
 }
 
 export {addTodo}

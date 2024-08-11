@@ -53,6 +53,10 @@ button {
     font-size: 1.2rem;
 }
 
+button:hover {
+    cursor: pointer;
+}
+
 #add-project-btn, .todo-btn {
     display: block;
     margin: 20px auto;

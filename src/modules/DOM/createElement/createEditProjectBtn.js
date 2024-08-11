@@ -1,5 +1,3 @@
-import { projectList } from "../../..";
-import { addNewProject } from "../../logic/project/addNewProject";
 import { editProject } from "../../logic/project/editProject";
 import { refreshContentDiv } from "../refreshContentDiv";
 import { createInputElement } from "./createInputElement";
@@ -22,7 +20,7 @@ function createEditProjectBtn(projectElement, projectId) {
     submitBtn.textContent = "Submit";
     submitBtn.addEventListener("click", (e) => {
         e.preventDefault();
-        editProject(projectList, projectId, dateInput.value.toString());
+        editProject(projectId, dateInput.value.toString());
         refreshContentDiv();
         alert("Change complete");
         dialog.close();

@@ -1,4 +1,3 @@
-import { projectList } from "../../..";
 import { addNewProject } from "../../logic/project/addNewProject";
 import { refreshContentDiv } from "../refreshContentDiv";
 import { createInputElement } from "./createInputElement";
@@ -24,7 +23,7 @@ function createAddProjectBtn() {
     submitBtn.textContent = "Submit";
     submitBtn.addEventListener("click", (e) => {
         e.preventDefault();
-        addNewProject(projectList, dateInput.value.toString());
+        addNewProject(dateInput.value.toString());
         refreshContentDiv();
         dialog.close();
         alert("Add complete");

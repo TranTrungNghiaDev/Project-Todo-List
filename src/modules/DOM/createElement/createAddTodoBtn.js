@@ -1,4 +1,3 @@
-import { projectList } from "../../..";
 import { refreshContentDiv } from "../refreshContentDiv";
 import { createLabelElement } from "./createLabelElement";
 import { createInputElement } from "./createInputElement";
@@ -45,7 +44,7 @@ function createAddTodoBtn(parentElement, projectId) {
         const dueDate = dueDateInput.value;
         const priority = priorityInput.value;
 
-        addTodo(projectList, projectId, title, description, dueDate, priority)
+        addTodo(projectId, title, description, dueDate, priority)
         refreshContentDiv();
         dialog.close();
         alert("Add complete");

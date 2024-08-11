@@ -1,4 +1,3 @@
-import { projectList } from "../../..";
 import { deleteTodo } from "../../logic/todo/deleteTodo";
 import { refreshContentDiv } from "../refreshContentDiv";
 import { createEditTodoBtn } from "../createElement/createEditTodoBtn";
@@ -37,7 +36,7 @@ function displayTodo(projectElement, projectData) {
         deleteBtn.addEventListener("click", () => {
             const result = confirm("Do you want to delete this todo ?");
             if(result) {
-                deleteTodo(projectList, projectData.id, todo.id);
+                deleteTodo(projectData.id, todo.id);
                 refreshContentDiv();
                 alert("Delete complete");
             }
